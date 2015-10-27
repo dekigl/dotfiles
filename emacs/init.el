@@ -2,7 +2,7 @@
 ;; パスの定義
 ;;************************************************************
 (setq load-path (cons
-	(expand-file-name "~/emacs/lisp")	;; private
+	(expand-file-name "~/dotfiles/emacs/elisp")	;; private
 	load-path))
 
 ;;************************************************************
