@@ -16,10 +16,12 @@
 ;;************************************************************
 ;; 言語設定
 ;;************************************************************
-; 言語を日本語にする
+; 言語を日本語(UTF-8)にする
 (set-language-environment 'Japanese)
-; 極力UTF-8とする
-(prefer-coding-system 'utf-8)
+(set-default-coding-systems 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+(set-terminal-coding-system 'utf-8)
+(set-buffer-file-coding-system 'utf-8)
 
 ;; フォント設定
 ;(if window-system
