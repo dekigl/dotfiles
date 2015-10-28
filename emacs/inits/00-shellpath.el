@@ -1,11 +1,7 @@
-;; PATH環境変数の設定を引き継ぐ
-(defun set-exec-path-from-shell-PATH ()
-    "Set up Emacs' `exec-path' and PATH environment variable to match that used by the user's shell.
+;; shellの環境変数を取り込む
+;; http://syohex.hatenablog.com/entry/20130718/1374154709
+(exec-path-from-shell-initialize)
 
-This is particularly useful under Mac OSX, where GUI apps are not started from a shell."
-    (interactive)
-    (let ((path-from-shell (replace-regexp-in-string "[ \t\n]*$" "" (shell-command-to-string "$SHELL --login -i -c 'echo $PATH'"))))
-      (setenv "PATH" path-from-shell)
-      (setq exec-path (split-string path-from-shell path-separator))))
-
-(set-exec-path-from-shell-PATH)
+; load environment variables
+(let ((envs '("PATH" "http_proxy" "https_proxy")))
+  (exec-path-from-shell-copy-envs envs))
