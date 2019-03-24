@@ -4,7 +4,7 @@
            (eq window-system 'ns))
   ;; フォントセットを作る
   (let* ((fontset-name "myfonts") ; フォントセットの名前
-         (size 12) ; ASCIIフォントのサイズ [9/10/12/14/15/17/19/20/...]
+         (size 15) ; ASCIIフォントのサイズ [9/10/12/14/15/17/19/20/...]
          (asciifont "Menlo") ; ASCIIフォント
          (jpfont "Hiragino Maru Gothic ProN") ; 日本語フォント
          (font (format "%s-%d:weight=normal:slant=normal" asciifont size))
