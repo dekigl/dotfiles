@@ -13,3 +13,5 @@ init.elにはpackage.plとinit-loader.elの設定しかない。
 個々のelisp読み込みとかは、emacs/inits/に、起動時に読み込む処理をファイル個別で入れておく。
 init-loader.elの使い方は以下を参考にした。
 <http://qiita.com/catatsuy/items/5f1cd86e2522fd3384a0>
+
+## 阿部に言われたので書き込み
